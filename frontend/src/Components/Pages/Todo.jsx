@@ -9,7 +9,7 @@ function Todo({ setToken }) {
 
   const fetchTodos = async () => {
     const res = await axios.get(
-      "http://localhost:5000/api/todos",
+      "https://todo-project-3xhb.onrender.com/api/todos",
       {
         headers: {
           Authorization: token,
@@ -28,7 +28,7 @@ function Todo({ setToken }) {
     if (!title) return;
 
     await axios.post(
-      "http://localhost:5000/api/todos",
+      "https://todo-project-3xhb.onrender.com/api/todos",
       { title },
       {
         headers: {
@@ -43,7 +43,7 @@ function Todo({ setToken }) {
 
   const deleteTodo = async (id) => {
     await axios.delete(
-      `http://localhost:5000/api/todos/${id}`,
+      `https://todo-project-3xhb.onrender.com/api/todos/${id}`,
       {
         headers: {
           Authorization: token,
@@ -62,7 +62,7 @@ function Todo({ setToken }) {
     if (!updatedTitle) return;
 
     await axios.put(
-      `http://localhost:5000/api/todos/${id}`,
+      `https://todo-project-3xhb.onrender.com/api/todos/${id}`,
       { title: updatedTitle },
       {
         headers: {
